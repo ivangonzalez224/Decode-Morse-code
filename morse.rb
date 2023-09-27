@@ -5,4 +5,10 @@ def decode_char(morseChar)
     return morse_hash.key(morseChar)
 end
 
-puts decode_char("..-.")
+def decode_word(word)
+    morseWord = ''
+    word.split(" ").each do |i|
+        morseWord.concat(decode_char i)
+    end
+    return morseWord
+end
